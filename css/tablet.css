@@ -1,0 +1,32 @@
+ #activity>div {
+   flex-wrap: wrap;
+ }
+
+ #activity .lodgin-art {
+   margin: 0 20px 20px 20px;
+ }
+
+ #activities .case-activities>article:nth-child(n) .blocklod {
+   height: 120px;
+ }
+
+ .case-activities {
+   margin-bottom: 0;
+ }
+
+ .case-activities:nth-child(1) {
+   order: 3;
+ }
+
+ .case-activities:nth-child(2) {
+   order: 1;
+ }
+
+ .case-activities:nth-child(3) {
+   order: 4;
+ }
+
+ .case-activities:nth-child(4) {
+   order: 2;
+ }
+ 

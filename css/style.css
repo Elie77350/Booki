@@ -1,0 +1,707 @@
+
+
+body {
+  font-family: 'Raleway', 'sans-serif';
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Snippet for box-sizing prefixes */
+* {
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+  -moz-box-sizing: border-box;
+  /* Firefox, others Gecko */
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, others WebKit */
+}
+
+:root {
+  --blueIconsSearch-color: #0065fc;
+  --blueCircle-color: #deebff;
+  --grayCard-color: #f2f2f2;
+  --whiteText-color: #fdfeff;
+  --blackText-color: #000000;
+}
+
+#container {
+  max-width: 1440px;
+  margin: auto;
+  width: 100%;
+}
+
+
+/*-----------------------*\
+          HEADER
+\*-----------------------*/
+
+.header-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+#logo {
+  width: 140px;
+  margin: 11px;
+}
+
+
+
+
+/*-----------------------*\
+          NAV-BAR
+\*-----------------------*/
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+nav a {
+  display: inline-block;
+  padding: 30px 29px 0;
+  border-top: 3px solid transparent;
+}
+
+nav a:hover {
+  border-top: 3px solid var(--blueIconsSearch-color);
+  text-decoration: none;
+  color: var(--blueIconsSearch-color);
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+#sub_nav a {
+  font-size: large;
+}
+
+/*-----------------------*\
+        SEARCH-FORM
+\*-----------------------*/
+
+form {
+  display: flex;
+  overflow: auto;
+  height: 53px;
+  margin-bottom: 33px;
+}
+
+
+.form_search {
+  margin-bottom: 19px;
+}
+
+div .fas.fa-map-marker-alt {
+  padding: 20px 20px 20px 20px;
+  background-color: var(--grayCard-color);
+  border-radius: 15px 0 0 15px;
+  cursor: pointer;
+}
+
+.form_search .fas.fa-map-marker-alt {
+  display: inline-flex;
+  align-items: center;
+  align-content: center;
+}
+
+.header .title {
+  margin-right: 28.2%;
+  font-size: 25px;
+  margin-bottom: 0;
+}
+
+.sub_title {
+  margin-right: 56%;
+  margin-bottom: 19px;
+  margin-top: 8px;
+  font-size: 18px;
+}
+
+/*NOTE All titles*/
+.title {
+  font-weight: 600;
+}
+
+header form input {
+  border: none;
+  border-top: 1px solid var(--grayCard-color);
+  border-bottom: 1px solid var(--grayCard-color);
+  padding: 0 48px 0 18px;
+}
+
+
+header form input::placeholder {
+  font-weight: 700;
+  color: black;
+  font-size: larger;
+}
+
+input:focus {
+  border: 2px solid;
+}
+
+
+header form button {
+  font-weight: 700;
+  border-radius: 0 18px 18px 0;
+  padding: 0 20px 0 20px;
+  color: white;
+  border: none;
+  font-size: larger;
+  cursor: pointer;
+}
+
+.b_blue {
+  background: var(--blueIconsSearch-color);
+}
+
+
+div .fas.fa-search {
+  background-color: var(--blueIconsSearch-color);
+  color: var(--whiteText-color);
+
+}
+
+.fas.fa-search {
+  display: none;
+}
+
+
+.fas.fa-search {
+  background-color: inherit;
+}
+
+/*-----------------------*\
+          FILTERS
+\*-----------------------*/
+
+#filter_list {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 17px 0 35px 0;
+}
+
+#union {
+  display: flex;
+  gap: 24px;
+} 
+
+.filter .fas {
+  color: var(--blueIconsSearch-color);
+  background-color: var(--blueCircle-color);
+  border-radius: 50%;
+  margin: -2px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--grayCard-color);
+  border-radius: 32px;
+}
+
+.filter span {
+  font-weight: bold;
+  font-size: 17px;
+  padding: 0 22px 0 14px;
+}
+
+#filter_list h2 {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 18px;
+  flex-wrap: wrap;
+  line-height: 19px;
+  margin: 0 8px 0 12px;
+}
+
+.filter:hover {
+  background-color: var(--blueIconsSearch-color);
+  color: var(--blueCircle-color);
+  transition-duration: 300ms;
+  cursor: pointer;
+  border: 2px solid var(--blueCircle-color);
+}
+
+
+.slide i {
+  transition-duration: 0.8s;
+  transition-property: transform;
+}
+
+.slide:hover i {
+  transform: rotate(360deg);
+}
+
+.info_text span {
+  display: flex;
+  padding: 5px;
+  width: 31px;
+  height: 30px;
+  text-align: center;
+  border: 2px solid var(--grayCard-color);
+  font-size: 12px;
+  border-radius: 20px;
+  margin-right: 12px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.info_text {
+  font-size: large;
+  margin-bottom: 35px;
+  display: flex;
+  align-items: center;
+}
+
+.blue {
+  color: var(--blueIconsSearch-color);
+}
+
+
+
+/*-----------------------------*\
+      LODGINS AND POPULARS
+\*------------------------------*/
+
+
+#lodgins-populars {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.lodgins a {
+  font-weight: bold;
+}
+
+.plus-link {
+  margin-left: 22px;
+}
+
+
+/*-----------------------*\
+          LODGINS
+\*-----------------------*/
+
+
+.lodgins-groups {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 10px 16px;
+}
+
+.figcaption p {
+  font-weight: 300;
+  margin: 4px 12px;
+  font-size: 15px;
+}
+
+.figcaption h3 {
+  margin: 10px 7px 0 12px;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+#lodgins {
+  flex: 2;
+  margin-right: 26px;
+}
+
+
+.lod-section .lodgin-art {
+  width: 237px;
+}
+
+.lodgin-art {
+  background-color: var(--whiteText-color);
+  border-radius: 25px;
+  box-shadow: 0 0 16px #0000002e;
+  overflow: hidden;
+  padding: 5px;
+  margin: 10px auto;
+}
+
+.lodgin-art:hover {
+  transform: scale(1.02);
+  transition-duration: 0.1s;
+}
+
+.lod-section .blocklod {
+  height: 120px;
+}
+
+.blocklod {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+}
+
+
+.lod-section .blocklod img {
+  width: 100%;
+}
+
+.lod{
+  margin-left: 39px;
+}
+
+.blocklod img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.7s ease;
+}
+
+.bd-pad {
+  border-radius: 25px;
+  padding: 16px 16px 16px 10px;
+}
+
+.bg-color {
+  background-color: var(--grayCard-color);
+}
+
+/*-----------------------*\
+         POPULARS
+\*-----------------------*/
+
+#aside-pop {
+  flex: 1;
+}
+
+.popular-art a {
+  display: flex;
+}
+
+.blockpop img {
+  border-radius: 25px 0 0 25px;
+  height: 135px;
+  width: 135px;
+  object-fit: cover;
+  padding: 5px;
+}
+
+
+.lodgins-populars h3 {
+  flex-basis: 100%;
+}
+
+#aside-pop .lodgin-art {
+  width: 346px;
+}
+
+#aside-pop .lodgin-art a {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+#aside-pop .blocklod {
+  width: 122px;
+  border-radius: 20px 0px 0px 20px;
+}
+
+#aside-pop .blocklod img {
+  height: 131%;
+}
+
+.pop-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 21px;
+  align-items: center;
+}
+
+
+.pop-icon .fas .fa-star {
+  margin-left: 25px;
+  margin-right: 10px;
+}
+
+/*NOTE icon star size*/
+#big {
+  font-size: larger;
+  cursor: pointer;
+}
+
+.pop-art_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.text-card {
+  width: 165px;
+  height: 145px;
+}
+
+.text-card h3 {
+  margin: 15px 0 0 12px;
+}
+
+.text-card p {
+  margin: 7px 0 40px 12px;
+}
+
+
+/*----------------------------------*\
+       STARS RATE GRAY AND BLUE
+\*----------------------------------*/
+
+.blue {
+  color: var(--blueIconsSearch-color);
+}
+
+.gray {
+  color: var(--grayCard-color);
+}
+
+.stars-rate {
+  margin: 0 12px 4px;
+  font-size: smaller;
+}
+
+
+/*----------------------------------*\
+  STYLE AND POSITION POPULARS ARTICLE 
+\*----------------------------------*/
+
+.popular-art {
+  display: flex;
+  background-color: var(--whiteText-color);
+  border-radius: 25px;
+  width: 344px;
+  box-shadow: 0 0 16px #0000002e;
+}
+
+.popular-art:hover {
+  transform: scale(1.02);
+  transition-duration: 0.1s;
+}
+
+.blocklod img:hover {
+  filter: saturate(7);
+}
+
+.blockpop {
+  width: 140px;
+  height: 145px;
+}
+
+
+.popular-art .figcaption {
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+
+
+/*----------------------------------*\
+              FOOTER 
+\*----------------------------------*/
+
+.foot {
+  display: flex;
+  background-color: var(--grayCard-color);
+  justify-content: center;
+  margin-top: 60px;
+  width: 100%;/*NOTE A MODIFIER */
+}
+
+.lodgins_foot {
+  padding: 32px 0 32px;
+  flex-basis: 24%;
+}
+
+
+footer ul a {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+
+footer div ul {
+  padding: 0;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  background-color: var(--grayCard-color);
+}
+
+
+.lodgins_foot h2 {
+  margin: 20px 1px;
+  font-weight: 600;
+  font-size: large;
+}
+
+
+/*----------------------------------*\
+            ACTIVITIES CARD
+ \*----------------------------------*/
+#activity {
+  margin-top: 50px;
+}
+
+.case-activities {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#activities .lodgin-art {
+  width: 305px;
+}
+
+#activities {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.case-activities .blocklod:nth-child(1) {
+  height: 400px;
+  margin: -8px;
+}
+
+
+.case-activities:nth-child(2)>article:nth-child(1) .blocklod {
+  /* height: 200px; */
+  height: 193px;
+}
+
+.case-activities:nth-child(2)>article:nth-child(2) .blocklod {
+  /* height: 91px; */
+  height: 113px;
+}
+
+.case-activities:nth-child(4)>article:nth-child(1) .blocklod {
+  /* height: 200px; */
+  height: 142px;
+}
+
+.case-activities:nth-child(4)>article:nth-child(2) .blocklod {
+  /* height: 91px; */
+  height: 157px;
+}
+
+#activity article a h3 {
+  margin-left: 17px;
+}
+
+.activity-art {
+  background-color: var(--whiteText-color);
+  border-radius: 20px;
+  box-shadow: 0 0 16px #0000002e;
+  overflow: hidden;
+  margin-right: 42px;
+  width: 303px;
+  display: flex;
+  flex-direction: column;
+}
+
+.activity-art:hover {
+  transform: scale(1.02);
+  transition-duration: 0.1s;
+}
+
+.activity-art a {
+  display: flex;
+  flex-direction: column;
+}
+
+.activity-art h3 {
+  padding: 16px 24px 17px 19px;
+  margin: 0;
+}
+
+.blockpop img {
+  transition: all 0.7s ease;
+}
+
+.blockpop img:hover {
+  filter: saturate(7);
+}
+
+.case-activities .blocklod img {
+  /*NOTE VOIR ICI*/
+  height: inherit;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+/*----------------------------------*\
+        ACTIVITIES IMAGES SIZE
+\*----------------------------------*/
+
+
+
+.activity-art:hover {
+  transform: scale(1.02);
+  transition-duration: 0.1s;
+}
+
+
+.blockact img {
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+.blockact img:hover {
+  filter: saturate(7);
+}
+
+/*----------------------------------*\
+   ACTIVITIES OVERLAY CARD POSITION
+\*----------------------------------*/
+
+.act-card_section {
+  display: flex;
+}
+
+.overlay-card {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.overlay-card2 {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+
